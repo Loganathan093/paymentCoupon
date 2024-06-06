@@ -58,6 +58,9 @@ button:hover {
 </head>
 <body>
     <div class="container">
+       <center>
+        <p id = "price" style="color: #45a049; font-size: x-large;"></p>
+       </center>
         <h2>Enter Coupon Code</h2>
         <form id="couponForm" action="#" method="POST">
             <input type="text" id="couponInput" name="coupon" placeholder="Enter coupon code">
@@ -67,11 +70,14 @@ button:hover {
 </body>
 </html>
 <script>
+    
     document.getElementById('couponForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
         var couponCode = document.getElementById('couponInput').value.trim(); // Get the entered coupon code
         if (couponCode.toLowerCase() === 'keerthi') { // Check if the coupon code is valid
-            alert('Coupon applied successfully!'); // Alert the user that the coupon was applied
+            alert('Coupon applied successfully!');
+            document.getElementById('couponInput').value = "";
+            document.getElementById('price').textContent = "Final Price 500"// Alert the user that the coupon was applied
             // You can add additional actions here, such as applying discounts or redirecting to another page
         } else {
             alert('Invalid coupon code. Please try again.'); // Alert the user if the coupon code is invalid

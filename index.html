@@ -63,7 +63,7 @@ button:hover {
        </center>
         <h2>Enter Coupon Code</h2>
         <form id="couponForm" action="#" method="POST">
-            <input type="text" id="couponInput" name="coupon" placeholder="Enter coupon code">
+            <input type="text" id="couponInput" autocomplete="off" name="coupon" placeholder="Enter coupon code">
             <button type="submit">Apply</button>
         </form>
     </div>
@@ -77,7 +77,7 @@ button:hover {
         if (couponCode.toLowerCase() === 'keerthi') { // Check if the coupon code is valid
             alert('Coupon applied successfully!');
             document.getElementById('couponInput').value = "";
-            document.getElementById('price').textContent = "Final Price 500"// Alert the user that the coupon was applied
+            document.getElementById('price').textContent = "Final Price Rs.500"// Alert the user that the coupon was applied
             // You can add additional actions here, such as applying discounts or redirecting to another page
         } else {
             alert('Invalid coupon code. Please try again.'); // Alert the user if the coupon code is invalid

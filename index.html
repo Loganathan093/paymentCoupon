@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coupon Form</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Coupon Code</h2>
+        <form id="couponForm" action="#" method="POST">
+            <input type="text" id="couponInput" name="coupon" placeholder="Enter coupon code">
+            <button type="submit">Apply</button>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById('couponForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        var couponCode = document.getElementById('couponInput').value.trim(); // Get the entered coupon code
+        if (couponCode.toLowerCase() === 'keerthi') { // Check if the coupon code is valid
+            alert('Coupon applied successfully!'); // Alert the user that the coupon was applied
+            // You can add additional actions here, such as applying discounts or redirecting to another page
+        } else {
+            alert('Invalid coupon code. Please try again.'); // Alert the user if the coupon code is invalid
+        }
+    });
+</script>
+

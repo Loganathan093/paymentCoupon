@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coupon Form</title>
+    <title>Coupon Code</title>
     <style>
         body {
     font-family: Arial, sans-serif;
@@ -77,7 +77,7 @@ button:hover {
         if (couponCode.toLowerCase() === 'keerthi') { // Check if the coupon code is valid
             alert('Coupon applied successfully!');
             document.getElementById('couponInput').value = "";
-            document.getElementById('price').textContent = "Final Price Rs.500"// Alert the user that the coupon was applied
+            document.getElementById('price').innerHTML = '<p style="color: #45a049; font-size:xx-large; width: 400px;">Final Price Rs.<span style="text-decoration: line-through;">600 </span>500 only</p>'// Alert the user that the coupon was applied
             // You can add additional actions here, such as applying discounts or redirecting to another page
         } else {
             alert('Invalid coupon code. Please try again.'); // Alert the user if the coupon code is invalid
